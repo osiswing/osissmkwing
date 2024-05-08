@@ -66,4 +66,12 @@
             top: 50%;
         }
     }
+
+    .backg {
+        background-image: url('assets/hero-img.svg');
+        background-size: 100%;
+        background-position: 50% 50%;
+        background-repeat: no-repeat;
+        height: 100%;
+    }
 }
