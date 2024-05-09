@@ -164,4 +164,55 @@
   .footer h1 {
     @apply font-bold text-xl 
   }
+
+  .footer li {
+    @apply mb-4;
+    text-decoration: none;
+    list-style: none;
+    list-style-type: none;
+  }
+
+  .footer a, router-link {
+    @apply text-[#d6d6d6] block text-sm;
+    transition: all .40s ease;
+  }
+
+  .footer a:hover, router-link:hover {
+    transform: translateY(-3px) translateX(-5px);
+    color: #fff;
+  }
+
+  .icon-content a {
+    @apply inline-block text-[#d6d6d6] text-2xl mr-4;
+    transition: all .40s ease;
+  }
+
+  @media (max-width: 1690px) {
+    .footer {
+      padding: 50px 5% 40px;
+    }
+  }
+
+  @media (max-width: 1120px) {
+    .footer {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, auto));
+      gap: 2rem;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .footer {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, auto));
+      gap: 2.5rem;
+    }
+  }
+
+  .copyright {
+    @apply bottom-0;
+    grid-column: 1 / span 3;
+    grid-row: 3;
+    
+  }
 }
