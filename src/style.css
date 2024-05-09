@@ -151,4 +151,17 @@
       
     }
   }
+
+  .footer {
+    grid-template-columns: repeat(auto-fit, minmax(200px, auto));
+    gap: 3.5rem;
+    padding: 80px 13% 70px;
+    position: absolute;
+    left: 0;
+    right: 0;
+  }
+
+  .footer h1 {
+    @apply font-bold text-xl 
+  }
 }
