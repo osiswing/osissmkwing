@@ -1,6 +1,5 @@
 <template>
   <div>
-
     <input type="checkbox" id="menu" class="hidden nav-input">
 
     <header

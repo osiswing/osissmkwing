@@ -3,75 +3,152 @@
 @tailwind utilities;
 
 @layer utilities {
-    body {
-        @apply bg-[#E3DFDF]
-    }
+  body {
+    @apply bg-[#E3DFDF];
+  }
 
+  .navigation {
+    transition: 0.3s;
+  }
+
+  .nav-menu:hover {
+    @apply text-[#3F4A72];
+  }
+
+  @media (max-width: 768px) {
     .navigation {
-        transition: 0.3s;
+      @apply absolute top-[70px] left-0 flex-col w-full items-center h-0 gap-20 overflow-hidden bg-white;
+      transition: 0.5s;
     }
 
-    .nav-menu:hover {
-        @apply text-[#3F4A72]
+    .navigation a:nth-child(1) {
+      @apply mt-14;
     }
 
-    @media (max-width: 768px) {
-        .navigation {
-            @apply absolute top-[70px] left-0 flex-col w-full items-center h-0 gap-20 overflow-hidden bg-white;
-            transition: 0.5s;
-        }
-
-        .navigation a:nth-child(1){
-            @apply mt-14
-        }
-
-        .nav-label {
-            @apply w-7 h-4 relative;
-        }
-
-        .nav-label div {
-            @apply w-full h-1 bg-[#3F4A72] absolute;
-            transform: translateY(-50%);
-            transition: 0.3s;
-            transform: scale(1);
-        }
-
-        .nav-label div:nth-child(1) {
-            @apply top-0
-        }
-
-        .nav-label div:nth-child(2) {
-            @apply top-[50%]
-        }
-
-        .nav-label div:nth-child(3) {
-            @apply top-[100%]
-        }
-
-        .nav-input:checked + header nav {
-            @apply h-[100vh]
-        }
-
-        .nav-input:checked + header label div:nth-child(1) {
-            transform: rotate(45deg);
-            top: 50%;
-        }
-        
-        .nav-input:checked + header label div:nth-child(2) {
-            transform: scale(0);
-        }
-
-        .nav-input:checked + header label div:nth-child(3) {
-            transform: rotate(-45deg);
-            top: 50%;
-        }
+    .nav-label {
+      @apply w-7 h-4 relative;
     }
 
-    .backg {
-        background-image: url('assets/hero-img.svg');
-        background-size: 100%;
-        background-position: 50% 50%;
-        background-repeat: no-repeat;
-        height: 100%;
+    .nav-label div {
+      @apply w-full h-1 bg-[#3F4A72] absolute;
+      transform: translateY(-50%);
+      transition: 0.3s;
+      transform: scale(1);
     }
+
+    .nav-label div:nth-child(1) {
+      @apply top-0;
+    }
+
+    .nav-label div:nth-child(2) {
+      @apply top-[50%];
+    }
+
+    .nav-label div:nth-child(3) {
+      @apply top-[100%];
+    }
+
+    .nav-input:checked + header nav {
+      @apply h-[100vh];
+    }
+
+    .nav-input:checked + header label div:nth-child(1) {
+      transform: rotate(45deg);
+      top: 50%;
+    }
+
+    .nav-input:checked + header label div:nth-child(2) {
+      transform: scale(0);
+    }
+
+    .nav-input:checked + header label div:nth-child(3) {
+      transform: rotate(-45deg);
+      top: 50%;
+    }
+  }
+
+  .backg {
+    background-image: url("assets/hero-img.svg");
+    background-size: 100%;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    height: 100%;
+  }
+  
+  .wave {
+    @apply absolute bottom-0 left-0 w-full h-[100px] bg-[url('assets/Vector.png')];
+    background-size: 1000px 100px;
+  }
+
+  .wave.wave1 {
+    animation: animate 30s linear infinite;
+    opacity: 1;
+    animation-delay: 0s;
+    bottom: 0;
+  }
+
+  .wave.wave2 {
+    animation: animate2 15s linear infinite;
+    opacity: 0.5;
+    animation-delay: -5s;
+    bottom: 10px;
+  }
+
+  .wave.wave3 {
+    animation: animate3 15s linear infinite;
+    opacity: 0.2;
+    animation-delay: -2s;
+    bottom: 15px;
+  }
+
+  .wave.wave4 {
+    animation: animate4 15s linear infinite;
+    opacity: 0.7;
+    animation-delay: -1s;
+    bottom: 20px;
+  }
+
+  @keyframes animate {
+    0% {
+      background-position-x: 0;
+
+    }
+    100% {
+      background-position-x: 1000px;
+      
+    }
+  }
+
+  @keyframes animate2 {
+    0% {
+      background-position-x: 0;
+
+    }
+    100% {
+      background-position-x: 1000px;
+      
+    }
+  }
+
+  @keyframes animate3 {
+    0% {
+      background-position-x: 0;
+
+    }
+    100% {
+      background-position-x: 1000px;
+      
+    }
+  }
+
+  @keyframes animate4 {
+    0% {
+      background-position-x: 0;
+
+    }
+    100% {
+      background-position-x: 1000px;
+      
+    }
+  }
 }
