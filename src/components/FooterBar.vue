@@ -23,13 +23,13 @@
                 </div>
             </div>
     
-            <div class="">
+            <!-- <div class="">
                 <h1 class="mb-6 py-4">Projects</h1>
                 <li> <a href="#">Lorem</a></li>
                 <li> <a href="#">Ipsum</a></li>
                 <li> <a href="#">Dolor</a></li>
                 <li> <a href="#">Sit Amet</a></li>
-            </div>
+            </div> -->
     
             <div>
                 <h1 class="mb-6 py-4">Quick Links</h1>
